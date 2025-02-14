@@ -28,20 +28,24 @@ void Warlock::introduce() const {
     std::cout << this->name << ": I am " << this->name << ", " << this->title << "!" << std::endl;
 }
 
-void Warlock::learnSpell(ASpell* spell) {
+void Warlock::learnSpell(ASpell* spell)
+{
     if (spell)
         spells[spell->getName()] = spell->clone();
 }
 
-void Warlock::forgetSpell(const std::string& spellName) {
+void Warlock::forgetSpell(const std::string& spellName)
+{
     std::map<std::string, ASpell*>::iterator it = spells.find(spellName);
-    if (it != spells.end()) {
+    if (it != spells.end())
+	{
         delete it->second;
         spells.erase(it);
     }
 }
 
-void Warlock::launchSpell(const std::string& spellName, const ATarget& target) {
+void Warlock::launchSpell(const std::string& spellName, const ATarget& target) 
+{
     std::map<std::string, ASpell*>::iterator it = spells.find(spellName);
     if (it != spells.end())
         it->second->launch(target);
