@@ -3,11 +3,11 @@
 
 # include "ASpell.hpp"
 
-class FireBall : public ASpell
+class Fireball : public ASpell
 {
 	public:
-		FireBall();
-		virtual ~FireBall();
+		Fireball();
+		virtual ~Fireball();
 
 		virtual ASpell* clone() const;
 };

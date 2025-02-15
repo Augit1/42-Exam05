@@ -11,7 +11,7 @@ class Warlock {
 private:
     std::string name;
     std::string title;
-	SpellBook	spellbook;
+	SpellBook	spellBook;
 
     Warlock();
     Warlock(const Warlock& other);

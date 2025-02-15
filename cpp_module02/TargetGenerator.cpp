@@ -16,4 +16,19 @@ void	TargetGenerator::learnTargetType(ATarget* target)
 }
 
 void	TargetGenerator::forgetTargetType(const std::string& type)
+{
+	std::map<std::string, ATarget*>::iterator it = targets.find(type);
+	if (it != targets.end())
+	{
+		delete it->second;
+		targets.erase(it);
+	}
+}
 
+ATarget*	TargetGenerator::createTarget(const std::string& type)
+{
+	std::map<std::string, ATarget*>::iterator it = targets.find(type);
+	if (it != targets.end())
+		return it->second->clone();
+	return NULL;
+}
