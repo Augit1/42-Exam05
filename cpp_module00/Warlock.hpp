@@ -9,7 +9,6 @@ private:
     std::string name;
     std::string title;
 
-    // Suppression du constructeur par défaut et du constructeur de copie
     Warlock();
     Warlock(const Warlock& other);
     Warlock& operator=(const Warlock& other);

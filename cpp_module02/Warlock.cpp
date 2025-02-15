@@ -25,7 +25,8 @@ void Warlock::setTitle(const std::string& newTitle)
     this->title = newTitle;
 }
 
-void Warlock::introduce() const {
+void Warlock::introduce() const
+{
     std::cout << this->name << ": I am " << this->name << ", " << this->title << "!" << std::endl;
 }
 

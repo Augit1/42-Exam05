@@ -1,10 +1,12 @@
 #include "Warlock.hpp"
 
-Warlock::Warlock(const std::string& name, const std::string& title) : name(name), title(title) {
+Warlock::Warlock(const std::string& name, const std::string& title) : name(name), title(title)
+{
     std::cout << this->name << ": This looks like another boring day." << std::endl;
 }
 
-Warlock::~Warlock() {
+Warlock::~Warlock()
+{
     std::cout << this->name << ": My job here is done!" << std::endl;
 
     for (std::map<std::string, ASpell*>::iterator it = spells.begin(); it != spells.end(); ++it)
@@ -12,19 +14,23 @@ Warlock::~Warlock() {
     spells.clear();
 }
 
-const std::string& Warlock::getName() const {
+const std::string& Warlock::getName() const
+{
     return this->name;
 }
 
-const std::string& Warlock::getTitle() const {
+const std::string& Warlock::getTitle() const
+{
     return this->title;
 }
 
-void Warlock::setTitle(const std::string& newTitle) {
+void Warlock::setTitle(const std::string& newTitle)
+{
     this->title = newTitle;
 }
 
-void Warlock::introduce() const {
+void Warlock::introduce() const
+{
     std::cout << this->name << ": I am " << this->name << ", " << this->title << "!" << std::endl;
 }
 
